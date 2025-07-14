@@ -3,6 +3,7 @@ import { sql } from "../config/db.js";
 import {
   createTransaction,
   deleteTransaction,
+  getSummaryByUserId,
   getTransactionsByUserId,
 } from "../controllers/transactionControllers.js";
 
@@ -14,6 +15,6 @@ router.post("/", createTransaction);
 
 router.delete("/:id", deleteTransaction);
 
-router.get("/summary/:userId", getTransactionsByUserId);
+router.get("/summary/:userId", getSummaryByUserId);
 
 export default router;
