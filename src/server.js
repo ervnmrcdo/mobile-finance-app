@@ -14,7 +14,6 @@ const PORT = process.env.PORT || 5001;
 if (process.env.NODE_ENV === "production") job.start();
 
 //middleware
-app.use();
 app.use(express.json());
 app.use(rateLimiter);
 
